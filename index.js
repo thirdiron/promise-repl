@@ -25,7 +25,7 @@ replServer.eval = function(cmd, context, filename, callback) {
       });
     } else if (result.then) {
       result.then(function(promiseResult) {
-        callback(null, ['[Promise]', prmoiseResult]);
+        callback(null, ['[Promise]', promiseResult]);
       });
     } else {
       // Not a thenable, just call the callback.
