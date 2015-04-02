@@ -13,9 +13,9 @@ replServer.eval = function(cmd, context, filename, callback) {
 
     if (result.then && result.catch) {
       result.then(function(promiseResult) {
-        replServer.outputStream.write(self.writer(promiseResult));
+        callback(null, ['[Promise]', promiseResult]);
       }).catch(function(err) {
-        replServer.outputStream.write(self.writer(err));
+        callback(err);
       });
     } else if (result.then && result.fail) {
       result.then(function(promiseResult) {
@@ -29,7 +29,6 @@ replServer.eval = function(cmd, context, filename, callback) {
       });
     }
 
-    callback(err, result);
   });
 };
 
