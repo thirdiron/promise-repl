@@ -1,6 +1,6 @@
 {
   "name": "promise-repl",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A customized repl that makes hacking promise based async functions simple",
   "main": "index.js",
   "scripts": {

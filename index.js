@@ -19,13 +19,13 @@ replServer.eval = function(cmd, context, filename, callback) {
       });
     } else if (result.then && result.fail) {
       result.then(function(promiseResult) {
-        util.inspect(promiseResult);
+        callback(null, ['[Promise]', promiseResult]);
       }).catch(function(Err) {
-        util.inspect(err);
+        callback(err);
       });
     } else if (result.then) {
       result.then(function(promiseResult) {
-        util.inspect(prmoiseResult);
+        callback(null, ['[Promise]', prmoiseResult]);
       });
     }
 
