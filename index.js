@@ -8,7 +8,8 @@ var replServer = repl.start({});
 var defaultEval = replServer.eval;
 replServer.eval = function(cmd, context, filename, callback) {
   defaultEval(cmd, context, filename, function(err, result) {
-    if (err) return callback(err, result);
+    if (err || !result) return callback(err, result);
+    
 
     if (result.then && result.catch) {
       result.then(function(promiseResult) {
