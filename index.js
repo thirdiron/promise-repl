@@ -5,6 +5,8 @@ var repl = require("repl");
 var replServer = repl.start({});
 
 replServer.writer = function(result) {
+  if (!result) return util.inspect(result);
+
   if (result.then && result.catch) {
     result.then(function(promiseResult) {
       util.inspect(promiseResult);
