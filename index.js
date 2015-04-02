@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var repl = require("repl");
+var repl = require('repl'),
+  util = require('util');
  
 var replServer = repl.start({});
 
