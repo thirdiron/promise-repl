@@ -10,7 +10,7 @@ To Use:
 
 
 ```
-> npm install -g "git+ssh://git@github.com:thirdiron/promise-repl.git"
+> npm install -g "https://github.com/thirdiron/promise-repl.git"
 > prepl
 ```
 
