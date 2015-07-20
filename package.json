@@ -2,6 +2,9 @@
   "name": "promise-repl",
   "version": "0.1.8",
   "description": "A customized repl that makes hacking promise based async functions simple",
+  "dependencies": {
+    "3i-db": "git+ssh://git@github.com:thirdiron/node-3i-db.git#v0.7.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
